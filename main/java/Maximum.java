@@ -16,4 +16,13 @@ public class Maximum {
             max1 = thirdNumber;
         return max1;
     }
+
+    public static String maxString(String firstString, String secondString, String thirdString) {
+        String max2 = firstString;
+        if(secondString.compareTo(max2) > 0)
+            max2 = secondString;
+        if(thirdString.compareTo(max2) > 0)
+            max2 = thirdString;
+        return max2;
+    }
 }
