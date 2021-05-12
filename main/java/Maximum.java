@@ -1,4 +1,15 @@
-public class Maximum {
+public class Maximum <T extends Comparable<T>> {
+    T first, second, third;
+
+    public Maximum(T first, T second, T third) {
+        this.first = first;
+        this.second = second;
+        this.third = third;
+    }
+
+    public T printMaximum() {
+        return Maximum.printMaximum(first,second,third);
+    }
 
     public static <T extends Comparable<T>> T printMaximum(T first, T second, T third) {
         T max = first;

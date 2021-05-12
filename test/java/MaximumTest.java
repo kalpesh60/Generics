@@ -65,4 +65,22 @@ public class MaximumTest {
         Assert.assertEquals("Peach", max1);
         System.out.println("Maximum No at Third position:" +max1);
     }
+
+    @Test
+    public void maxValueOfInteger_ShouldReturnTrue() {
+        int result = Maximum.printMaximum(10,7,9);
+        Assert.assertEquals(result,10);
+    }
+
+    @Test
+    public void maxValueOfFloat_ShouldReturnTrue() {
+        Double result = Maximum.printMaximum(10.0,11.0,9.0);
+        Assert.assertEquals(result,11.0,0);
+    }
+
+    @Test
+    public void maxValueOfString_ShouldReturnTrue() {
+        String result = Maximum.printMaximum("Apple","Banana","Peach");
+        Assert.assertEquals(result,"Peach");
+    }
 }
