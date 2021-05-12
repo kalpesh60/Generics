@@ -70,17 +70,44 @@ public class MaximumTest {
     public void maxValueOfInteger_ShouldReturnTrue() {
         int result = Maximum.printMaximum(10,7,9);
         Assert.assertEquals(result,10);
+        System.out.println(result);
     }
 
     @Test
     public void maxValueOfFloat_ShouldReturnTrue() {
         Double result = Maximum.printMaximum(10.0,11.0,9.0);
         Assert.assertEquals(result,11.0,0);
+        System.out.println(result);
     }
 
     @Test
     public void maxValueOfString_ShouldReturnTrue() {
         String result = Maximum.printMaximum("Apple","Banana","Peach");
         Assert.assertEquals(result,"Peach");
+        System.out.println(result);
+    }
+
+    @Test
+    public void maxValueInteger_ShouldReturnTrue() {
+        Integer array [] ={12,54,87,98,34};
+        int result = Maximum.multipleValues(array);
+        Assert.assertEquals(98,result);
+        System.out.println("maximum from multiple:" +result);
+    }
+
+    @Test
+    public void maxValueFloat_ShouldReturnTrue() {
+        Double array [] ={12.0,54.4,87.3,98.2,34.5};
+        double result = Maximum.multipleValues(array);
+        Assert.assertEquals(98.2,result,0);
+        System.out.println("maximum from multiple:" +result);
+    }
+
+    @Test
+    public void maxValueString_ShouldReturnTrue() {
+        String array [] ={"Banana","Peach","Apple","Mango","Orange"};
+        String result = Maximum.multipleValues(array);
+        Assert.assertEquals("Peach",result);
+        System.out.println("maximum from multiple:" +result);
     }
 }

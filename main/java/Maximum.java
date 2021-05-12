@@ -7,10 +7,17 @@ public class Maximum <T extends Comparable<T>> {
         this.third = third;
     }
 
-    public T printMaximum() {
-        return Maximum.printMaximum(first,second,third);
+//For multiple Parameters
+    public static <T extends Comparable<T>> T multipleValues(T[] array) {
+        T max = array[0];
+        for(int i=1; i<array.length; i++) {
+            if(array[i].compareTo(max) > 0)
+                max = array[i];
+        }
+        return max;
     }
 
+//For Three Parameters
     public static <T extends Comparable<T>> T printMaximum(T first, T second, T third) {
         T max = first;
         if (second.compareTo(max) > 0)
@@ -19,6 +26,7 @@ public class Maximum <T extends Comparable<T>> {
             max = third;
         return max;
     }
+
 }
 //    public static int maxInteger(Integer firstNumber,Integer secondNumber,Integer thirdNumber) {
 //        int max = firstNumber;
