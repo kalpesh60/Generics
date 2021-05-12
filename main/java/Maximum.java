@@ -7,4 +7,13 @@ public class Maximum {
             max = thirdNumber;
         return max;
     }
+
+    public static float maxFloat(Float firstNumber, Float secondNumber, Float thirdNumber) {
+        float max1 = firstNumber;
+        if(secondNumber.compareTo(max1) > 0)
+            max1 = secondNumber;
+        if(thirdNumber.compareTo(max1) > 0)
+            max1 = thirdNumber;
+        return max1;
+    }
 }
